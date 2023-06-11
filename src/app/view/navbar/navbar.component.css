@@ -1,0 +1,32 @@
+nav {
+    background-color: #FDF6E3;
+    /* Set your preferred background color */
+    padding: 10px;
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: left;
+}
+
+.navbar-button {
+    text-decoration: none;
+    color: #FFF;
+    /* Set your preferred color */
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #8a468a;
+    /* Set your preferred button background color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-button:hover {
+    background-color: #FFA500;
+    /* Set your preferred button hover background color */
+}

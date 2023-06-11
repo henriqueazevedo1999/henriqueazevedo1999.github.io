@@ -1,0 +1,28 @@
+  .header {
+      background-color: #E9F7EF;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .header h1 {
+      font-family: 'Comic Neue', cursive;
+      font-size: 32px;
+      color: #333333;
+      margin: 0;
+  }
+
+  .header p {
+      font-family: 'Comic Neue', cursive;
+      font-size: 18px;
+      color: #666666;
+      margin: 10px 0;
+  }
+
+  .rainbow-text {
+      font-family: "Arial", sans-serif;
+      font-size: 200px;
+      /* Adjust the font size as desired */
+      background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
