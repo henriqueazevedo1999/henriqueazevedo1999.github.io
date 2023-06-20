@@ -1,0 +1,34 @@
+<h1 class="page-title">Cadastro2</h1>
+
+<div class="section">
+  <label for="idInput">ID:</label>
+  <input type="text" id="idInput" [(ngModel)]="id">
+  <br><br>
+  <button class="btn" (click)="consultar()" [ngClass]="{'disabled-button': !id || id == 0}" [disabled]="!id || id == 0">Consultar</button>
+</div>
+
+<div *ngIf="registro && registro.id !== 0" class="section">
+  <p><strong>ID:</strong> {{ registro.id }}</p>
+  <p><strong>Nome:</strong> {{ registro.nome }}</p>
+  <p><strong>Departamento:</strong> {{ registro.departamento }}</p>
+  <p><strong>Endereço:</strong> {{ registro.endereco }}</p>
+  <p><strong>Email:</strong> {{ registro.email }}</p>
+  <button class="btn" (click)="excluir()">Exclusão</button>
+</div>
+
+<div class="section">
+  <form #cadastroForm="ngForm" (ngSubmit)="inserir()">
+    <label for="nomeInput">Nome:</label>
+    <input type="text" id="nomeInput" [(ngModel)]="nome" name="nomeInput" required>
+    <label for="departamentoInput">Departamento:</label>
+    <input type="text" id="departamentoInput" [(ngModel)]="departamento" name="departamentoInput" required>
+    <label for="enderecoInput">Endereço:</label>
+    <input type="text" id="enderecoInput" [(ngModel)]="endereco" name="enderecoInput" required>
+    <label for="emailInput">Email:</label>
+    <input type="text" id="emailInput" [(ngModel)]="email" name="emailInput" required>
+    <br><br>
+    <button type="submit" [ngClass]="{'disabled-button': !cadastroForm.form.valid}" [disabled]="!cadastroForm.form.valid" class="btn">Inserir</button>
+  </form>
+</div>
+
+<div [style.background-color]="mensagemCor" class="mensagem">{{ mensagem }}</div>

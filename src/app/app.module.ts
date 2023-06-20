@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { MainPageComponent } from './view/main-page/main-page.component';
 import { FuncionarioComponent } from './view/funcionario/funcionario.component';
 import { FooterComponent } from './view/footer/footer.component';
 import { HomeComponent } from './view/home/home.component';
+import { CadastroComponent } from './view/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { HomeComponent } from './view/home/home.component';
     MainPageComponent,
     FuncionarioComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
