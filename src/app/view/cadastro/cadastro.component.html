@@ -4,7 +4,8 @@
   <label for="idInput">ID:</label>
   <input type="text" id="idInput" [(ngModel)]="id">
   <br><br>
-  <button class="btn" (click)="consultar()" [ngClass]="{'disabled-button': !id || id == 0}" [disabled]="!id || id == 0">Consultar</button>
+  <button class="btn" (click)="consultar()" [ngClass]="{'disabled-button': !id || id == 0}"
+    [disabled]="!id || id == 0">Consultar</button>
 </div>
 
 <div *ngIf="registro && registro.id !== 0" class="section">
@@ -14,6 +15,7 @@
   <p><strong>Endereço:</strong> {{ registro.endereco }}</p>
   <p><strong>Email:</strong> {{ registro.email }}</p>
   <button class="btn" (click)="excluir()">Exclusão</button>
+  <p [style.color]="mensagemCor"><strong>{{ mensagem }}</strong></p>
 </div>
 
 <div class="section">
@@ -27,8 +29,7 @@
     <label for="emailInput">Email:</label>
     <input type="text" id="emailInput" [(ngModel)]="email" name="emailInput" required>
     <br><br>
-    <button type="submit" [ngClass]="{'disabled-button': !cadastroForm.form.valid}" [disabled]="!cadastroForm.form.valid" class="btn">Inserir</button>
+    <button type="submit" [ngClass]="{'disabled-button': !cadastroForm.form.valid}"
+      [disabled]="!cadastroForm.form.valid" class="btn">Inserir</button>
   </form>
 </div>
-
-<div [style.background-color]="mensagemCor" class="mensagem">{{ mensagem }}</div>

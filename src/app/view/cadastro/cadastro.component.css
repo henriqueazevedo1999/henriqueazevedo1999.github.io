@@ -33,13 +33,6 @@ input[type="text"] {
     background-color: #0056b3;
 }
 
-.mensagem {
-    padding: 10px;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-}
-
 .disabled-button {
     opacity: 0.5;
     pointer-events: none;
